@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "rune_circuit:block/aquamarine_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "rune_circuit:block/aquamarine_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "rune_circuit:block/aquamarine_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "rune_circuit:block/aquamarine_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "rune_circuit:block/aquamarine_cluster"
+    },
+    "facing=west": {
+      "model": "rune_circuit:block/aquamarine_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
