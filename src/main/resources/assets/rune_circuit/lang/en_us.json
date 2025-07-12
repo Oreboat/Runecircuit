@@ -1,5 +1,22 @@
 {
   "block.rune_circuit.block_of_aquamarine": "Block of Aquamarine",
   "block.rune_circuit.aquamarine_cluster": "Aquamarine Cluster",
-  "block.rune_circuit.emerald_cluster": "Emerald Cluster"
+  "block.rune_circuit.emerald_cluster": "Emerald Cluster",
+  "block.rune_circuit.block_of_garnet": "Block of Garnet",
+  "block.rune_circuit.garnet_cluster": "Garnet Cluster",
+  "block.rune_circuit.block_of_topaz": "Block of Topaz",
+  "block.rune_circuit.topaz_cluster": "Topaz Cluster",
+  "block.rune_circuit.block_of_amber": "Block of Amber",
+  "block.rune_circuit.amber_cluster": "Amber Cluster",
+
+  "block.rune_circuit.pyrite_ore": "Gold Ore?",
+  "block.rune_circuit.deepslate_pyrite_ore": "Deepslate Gold Ore?",
+  "block.rune_circuit.pyrite_block": "Pyrite Block",
+
+  "item.rune_circuit.aquamarine_shard": "Aquamarine Shard",
+  "item.rune_circuit.topaz_shard" : "Topaz Shard",
+  "item.rune_circuit.garnet_shard" : "Garnet Shard",
+  "item.rune_circuit.amber_shard": "Amber Shard",
+  "item.rune_circuit.raw_pyrite" : "Raw Gold?",
+  "item.rune_circuit.pyrite_crystal": "Pyrite"
 }

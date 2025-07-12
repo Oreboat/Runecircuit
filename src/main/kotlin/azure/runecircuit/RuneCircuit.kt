@@ -1,12 +1,16 @@
 package azure.runecircuit
 
-import azure.runecircuit.blocks.aquamarine_block.ModBlocks
+import azure.runecircuit.blocks.ModBlocks
+import azure.runecircuit.items.ModItemGroups
+import azure.runecircuit.items.ModItems
 
 object RuneCircuit {
 
-    val MOD_ID: String = "rune_circuit"
+    const val MOD_ID: String = "rune_circuit"
 
     fun onInitialize(){
         ModBlocks.initialize()
+        ModItems.initialize()
+        ModItemGroups.initialize()
     }
 }

@@ -1,4 +1,4 @@
-package azure.runecircuit.blocks.aquamarine_block
+package azure.runecircuit.blocks
 
 import net.minecraft.block.AmethystClusterBlock
 import net.minecraft.block.BlockState
@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.shape.VoxelShape
 import net.minecraft.world.BlockView
 
-class CrystalCluster(settings: Settings) : AmethystClusterBlock(7.0f, 0.0f,
+open class CrystalCluster(settings: Settings) : AmethystClusterBlock(7.0f, 0.0f,
     settings.nonOpaque()
 ) {
     override fun getOutlineShape(

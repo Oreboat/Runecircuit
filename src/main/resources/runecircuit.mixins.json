@@ -4,11 +4,19 @@
   "package": "azure.runecircuit.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AmethystBlockMixin",
+    "AmethystClusterMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-  }
+  },
+  "client": [
+
+  ],
+  "server": [
+
+  ]
 }

@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "": {
+      "model": "rune_circuit:block/block_of_garnet"
+    }
+  }
+
+}

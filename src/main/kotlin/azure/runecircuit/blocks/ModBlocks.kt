@@ -1,9 +1,9 @@
-package azure.runecircuit.blocks.aquamarine_block
+package azure.runecircuit.blocks
 import azure.runecircuit.RuneCircuit
-import azure.runecircuit.Runecircuit
+import azure.runecircuit.blocks.CrystalCluster
 import net.minecraft.block.AbstractBlock
-import net.minecraft.block.AmethystClusterBlock
 import net.minecraft.block.Block
+import net.minecraft.block.FlowerBlock
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.registry.Registries
@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier
 
 object ModBlocks {
 
-    val CrystalSettings = AbstractBlock.Settings.create().luminance { 15 }.sounds(BlockSoundGroup.AMETHYST_BLOCK)
+    val CrystalSettings: AbstractBlock.Settings = AbstractBlock.Settings.create().luminance { 15 }.hardness(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)
 
     val AquamarineBlock = Block(CrystalSettings)
     val AquamarineCluster = CrystalCluster(CrystalSettings)
@@ -29,12 +29,24 @@ object ModBlocks {
     val AmberBlock = Block(CrystalSettings)
     val AmberCluster = CrystalCluster(CrystalSettings)
 
+    val CorruptCrystalBlock = CorruptedCrystalBlock()
+    val CorruptCrystalCluster = CorruptedCrystalCluster()
+
+    val PyriteOre = Block(AbstractBlock.Settings.create().hardness(4.5f))
+    val DeepslatePyriteOre = Block(AbstractBlock.Settings.create().hardness(4.5f))
+    val PyriteBlock = Block(AbstractBlock.Settings.create().hardness(5f))
+
 
     private fun registerBlock(name: String, block: Block){
         Registry.register(Registries.BLOCK, Identifier.of(RuneCircuit.MOD_ID, name), block)
         Registry.register(Registries.ITEM, Identifier.of(RuneCircuit.MOD_ID, name), BlockItem(block, Item.Settings()))
     }
     fun initialize(){
+
+        registerBlock("pyrite_ore", PyriteOre)
+        registerBlock("deepslate_pyrite_ore", DeepslatePyriteOre)
+        registerBlock("pyrite_block", PyriteBlock)
+
         registerBlock("block_of_aquamarine", AquamarineBlock)
         registerBlock("aquamarine_cluster", AquamarineCluster)
 
@@ -48,6 +60,9 @@ object ModBlocks {
 
         registerBlock("block_of_amber", AmberBlock)
         registerBlock("amber_cluster", AmberCluster)
+
+        registerBlock("block_of_corrupted_crystal", CorruptCrystalBlock)
+        registerBlock("corrupted_crystal_cluster", CorruptCrystalCluster)
 
     }
 
