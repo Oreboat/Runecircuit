@@ -18,5 +18,7 @@
   "item.rune_circuit.garnet_shard" : "Garnet Shard",
   "item.rune_circuit.amber_shard": "Amber Shard",
   "item.rune_circuit.raw_pyrite" : "Raw Gold?",
-  "item.rune_circuit.pyrite_crystal": "Pyrite"
+  "item.rune_circuit.pyrite_crystal": "Pyrite",
+
+  "item.rune_circuit.crystal_staff": "Crystal Staff"
 }

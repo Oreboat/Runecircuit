@@ -4,12 +4,14 @@ import azure.runecircuit.RuneCircuit
 import azure.runecircuit.Runecircuit
 import azure.runecircuit.blocks.ModBlocks
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
+import net.minecraft.block.EndPortalBlock
 import net.minecraft.item.ItemStack
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registries.ITEM_GROUP
 import net.minecraft.registry.Registry
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
+
 
 object ModItemGroups {
     val rune_circuit_blocks =Registry.register(Registries.ITEM_GROUP, Identifier.of(RuneCircuit.MOD_ID, "rune_circuit_blocks"), FabricItemGroup.builder()
@@ -19,12 +21,22 @@ object ModItemGroups {
             context, entries ->
             entries.add(ModBlocks.AmberBlock)
             entries.add(ModBlocks.AmberCluster)
+            entries.add(ModBlocks.AmberOre)
+            entries.add(ModBlocks.DeepslateAmberOre)
+            entries.add(ModBlocks.AmethystOre)
+            entries.add(ModBlocks.DeepslateAmethystOre)
             entries.add(ModBlocks.AquamarineBlock)
             entries.add(ModBlocks.AquamarineCluster)
+            entries.add(ModBlocks.AquamarineOre)
+            entries.add(ModBlocks.DeepslateAquamarineOre)
             entries.add(ModBlocks.GarnetBlock)
             entries.add(ModBlocks.GarnetCluster)
+            entries.add(ModBlocks.GarnetOre)
+            entries.add(ModBlocks.DeepslateGarnetOre)
             entries.add(ModBlocks.TopazBlock)
             entries.add(ModBlocks.TopazCluster)
+            entries.add(ModBlocks.TopazOre)
+            entries.add(ModBlocks.DeepslateTopazOre)
             entries.add(ModBlocks.PyriteOre)
             entries.add(ModBlocks.DeepslatePyriteOre)
             entries.add(ModBlocks.PyriteBlock)
@@ -45,6 +57,16 @@ object ModItemGroups {
             entries.add(ModItems.PyriteCrystal)
         }
         .build())
+
+    val RuneCircuitTools = Registry.register(Registries.ITEM_GROUP, Identifier.of(RuneCircuit.MOD_ID, "rune_circuit_tools"), FabricItemGroup.builder()
+        .icon { ItemStack(ModItems.CrystalStaff) }
+        .displayName(Text.translatable("itemGroup.rune_circuit.rune_circuit_tools"))
+        .entries {
+                context, entries ->
+            entries.add(ModItems.CrystalStaff)
+        }
+        .build())
+
     fun initialize(){
 
     }

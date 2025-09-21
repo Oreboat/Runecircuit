@@ -1,6 +1,7 @@
 package azure.runecircuit.items
 
 import azure.runecircuit.RuneCircuit
+import azure.runecircuit.tools.CrystalStaff
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.registry.Registries
@@ -19,6 +20,7 @@ object ModItems {
     val AquamarineShard = Item(Item.Settings())
     val GarnetShard = Item(Item.Settings())
     val TopazShard = Item(Item.Settings())
+    val CrystalStaff = Item(Item.Settings())
 
     fun initialize(){
         addItem("raw_pyrite", RawPyrite)
@@ -27,5 +29,6 @@ object ModItems {
         addItem("aquamarine_shard", AquamarineShard)
         addItem("garnet_shard", GarnetShard)
         addItem("topaz_shard", TopazShard)
+        addItem("crystal_staff", CrystalStaff)
     }
 }
