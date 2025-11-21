@@ -40,6 +40,7 @@ object ModItemGroups {
             entries.add(ModBlocks.PyriteOre)
             entries.add(ModBlocks.DeepslatePyriteOre)
             entries.add(ModBlocks.PyriteBlock)
+            entries.add(ModItems.PureManaBucket)
 
         }
         .build())

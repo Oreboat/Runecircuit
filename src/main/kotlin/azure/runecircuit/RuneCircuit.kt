@@ -1,6 +1,7 @@
 package azure.runecircuit
 
 import azure.runecircuit.blocks.ModBlocks
+import azure.runecircuit.blocks.fluids.ModFluids
 import azure.runecircuit.items.ModItemGroups
 import azure.runecircuit.items.ModItems
 import com.github.quillraven.fleks.configureWorld
@@ -14,5 +15,6 @@ object RuneCircuit {
         ModBlocks.initialize()
         ModItems.initialize()
         ModItemGroups.initialize()
+        ModFluids.initialize()
     }
 }

@@ -1,5 +1,7 @@
 package azure.runecircuit.blocks.fluids
 
+import azure.runecircuit.items.ModItems
+import azure.runecircuit.items.PureManaBucket
 import net.minecraft.block.BlockState
 import net.minecraft.fluid.FlowableFluid
 import net.minecraft.fluid.Fluid
@@ -12,23 +14,25 @@ import net.minecraft.world.World
 import net.minecraft.world.WorldAccess
 import net.minecraft.world.WorldView
 import net.minecraft.block.Block
+import net.minecraft.state.StateManager
+import net.minecraft.state.property.Properties
 import net.minecraft.util.math.Vec3d
 
 abstract class PureMana: FlowableFluid() {
     override fun getStill(): Fluid? {
-        TODO("Not yet implemented")
+        return Still
     }
 
     override fun getFlowing(): Fluid? {
-        TODO("Not yet implemented")
+        return Flowing
     }
 
     override fun getBucketItem(): Item? {
-        TODO("Not yet implemented")
+        return ModItems.PureManaBucket
     }
 
     override fun toBlockState(state: FluidState?): BlockState? {
-        TODO("Not yet implemented")
+        return ModFluids.PURE_MANA.defaultState.with(Properties.LEVEL_15, getBlockStateLevel(state)) as BlockState?;
     }
 
     override fun getVelocity(world: BlockView?, pos: BlockPos?, state: FluidState?): Vec3d? {
@@ -70,6 +74,40 @@ abstract class PureMana: FlowableFluid() {
 
     protected override fun getLevelDecreasePerBlock(world: WorldView?): Int {
         return 1
+    }
+
+    protected override fun getMaxFlowDistance(world: WorldView?): Int {
+        return 10
+    }
+
+
+
+    object Flowing: PureMana() {
+
+        override fun appendProperties(builder: StateManager.Builder<Fluid?, FluidState?>?) {
+            super.appendProperties(builder)
+            builder?.add(LEVEL)
+        }
+
+        override fun getLevel(state: FluidState?): Int {
+            return state?.get(LEVEL) ?: return 0
+        }
+
+        override fun isStill(state: FluidState?): Boolean {
+            return false
+        }
+
+    }
+
+    object Still: PureMana(){
+        override fun getLevel(state: FluidState?): Int {
+            return 8
+        }
+
+        override fun isStill(state: FluidState?): Boolean {
+            return true
+        }
+
     }
 
 }

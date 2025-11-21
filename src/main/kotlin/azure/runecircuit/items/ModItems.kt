@@ -21,6 +21,7 @@ object ModItems {
     val GarnetShard = Item(Item.Settings())
     val TopazShard = Item(Item.Settings())
     val CrystalStaff = Item(Item.Settings())
+    val PureManaBucket = PureManaBucket()
 
     fun initialize(){
         addItem("raw_pyrite", RawPyrite)
@@ -30,5 +31,6 @@ object ModItems {
         addItem("garnet_shard", GarnetShard)
         addItem("topaz_shard", TopazShard)
         addItem("crystal_staff", CrystalStaff)
+        addItem("pure_mana_bucket", PureManaBucket)
     }
 }
